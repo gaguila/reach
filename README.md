@@ -9,6 +9,5 @@ Game rules
 
 
 ## Debugging
-Set Debugger to true in line 2 of the script.js file
-
-Click on Panda to reveal the word to test functionality
+-	Set Debugger to true in line 2 of the script.js file
+-	Click on Panda to reveal the word to test functionality
