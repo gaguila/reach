@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Panda's Word Guess Game</title>
-	<script src="scripts/script.js"></script>	
-	<script src="scripts/countUp.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/birds.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panda's Word Guess Game</title>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/countUp.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/birds.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
 </head>
 
 <body>
-	<div id="mainContainer">
-		<div class="mainBirdContainer">
-				<div class="bird-container bird-container--one">
-					<div class="bird bird--one"></div>
-				</div>
-				<div class="bird-container bird-container--two">
-					<div class="bird bird--two"></div>
-				</div>
-				<div class="bird-container bird-container--three">
-					<div class="bird bird--three"></div>
-				</div>
-				<div class="bird-container bird-container--four">
-					<div class="bird bird--four"></div>
-				</div>
-			<div class="row">
-				<div class="col center-item">
-					<div id="console">
-						<button id="easy" class="btn btn-primary btn-lg" onclick="resetGame(urlEasy, 'easy')">Easy</button>
-						<button id="easy" class="btn btn-warning btn-lg" onclick="resetGame(urlMedium, 'medium')">Medium</button>
-						<button id="easy" class="btn btn-danger btn-lg" onclick="resetGame(urlHard, 'hard')">Hard</button>
-					</div>
-					<div id="game-container" class="orange-rounded">
-						<div id='loadBar'>Loading new word...</div>
-						<div id="main" class="center-item">
-							<form id="letterEntry" name="letterBox" autocomplete="off">
-								<div class="form-group">
-									<label for="email" class="sizeMed">Enter one letter:</label><br><br>
-									<input type="text" name="letterField" id="guessedLetter" disabled="true" class="" onkeyup="evaluateEntry()" maxlength="1" size="1">
-									<p id="errorStatus" class="error"></p>
-								</div>
-							</form>
-							<div id="placeholders" class="finalWord"></div>
-							<div class="grey">Difficulty Level: <span id="difficultyLevel"></span></div>
-							<button id="reset" class="btn btn-secondary btn-lg top15" onclick="resetGame(currentLevel, currentDifficulty)">Reset Game</button>
-						</div>
-					</div>
-					<div id="letters-guessed-box" class="orange-rounded">
-						<p id="lettersGuessedTextBox" class="sizeMed grey">The letters you choose will go in here </p>
-					</div>
-				</div>
-				<div class="col center-item">
-					<h1 class="choco-font sizeLrg">Panda's Word Guess Game</h1>
-					<div id="pandaHolderContainer"><img id="pandaHolder" class="responsive" src="imgs/panda-hi.png" width="369" height="449"></div>
-					<div id="stats-box" class="orange-rounded">
-						<p id='instructions'>I'm thinking of a new word.  Please wait....</p>
-						<p id='countStatus'></p>
-					</div>
-					<div id='win-streak'>-----Current Win Streak: <span id="streakNum"></span>-----	</div>
-					<span id="easterEgg"></span>
-				</div>
-			</div> <!--End Row-->
-		</div> <!--Bird container-->
-	</div> <!--main container-->
-	<script>
-		var pandaHolder = document.querySelector('#pandaHolder');
-		pandaHolder.addEventListener('click', function(){document.getElementById('easterEgg').style.visibility = "visible";});
-	</script>
+    <div id="mainContainer">
+        <div class="mainBirdContainer">
+            <div class="bird-container bird-container--one">
+                <div class="bird bird--one"></div>
+            </div>
+            <div class="bird-container bird-container--two">
+                <div class="bird bird--two"></div>
+            </div>
+            <div class="bird-container bird-container--three">
+                <div class="bird bird--three"></div>
+            </div>
+            <div class="bird-container bird-container--four">
+                <div class="bird bird--four"></div>
+            </div>
+            <div class="row">
+                <div class="col center-item">
+                    <div id="console">
+                        <button id="easy" class="btn btn-primary btn-lg" onclick="resetGame(urlEasy, 'easy')">Easy</button>
+                        <button id="easy" class="btn btn-warning btn-lg" onclick="resetGame(urlMedium, 'medium')">Medium</button>
+                        <button id="easy" class="btn btn-danger btn-lg" onclick="resetGame(urlHard, 'hard')">Hard</button>
+                    </div>
+                    <div id="game-container" class="orange-rounded">
+                        <div id='loadBar'>Loading new word...</div>
+                        <div id="main" class="center-item">
+                            <form id="letterEntry" name="letterBox" autocomplete="off">
+                                <div class="form-group">
+                                    <label for="email" class="sizeMed">Enter one letter:</label><br><br>
+                                    <input type="text" name="letterField" id="guessedLetter" disabled="true" class="" onkeyup="evaluateEntry()" maxlength="1" size="1">
+                                    <p id="errorStatus" class="error"></p>
+                                </div>
+                            </form>
+                            <div id="placeholders" class="finalWord"></div>
+                            <div class="grey">Difficulty Level: <span id="difficultyLevel"></span></div>
+                            <button id="reset" class="btn btn-secondary btn-lg top15" onclick="resetGame(currentLevel, currentDifficulty)">Reset Game</button>
+                        </div>
+                    </div>
+                    <div id="letters-guessed-box" class="orange-rounded">
+                        <p id="lettersGuessedTextBox" class="sizeMed grey">The letters you choose will go in here </p>
+                    </div>
+                </div>
+                <div class="col center-item">
+                    <h1 class="choco-font sizeLrg">Panda's Word Guess Game</h1>
+                    <div id="pandaHolderContainer"><img id="pandaHolder" class="responsive" src="imgs/panda-hi.png" width="369" height="449"></div>
+                        <div id="stats-box" class="orange-rounded">
+                            <p id='instructions'>I'm thinking of a new word. Please wait....</p>
+                            <p id='countStatus'></p>
+                        </div>
+                        <div id='win-streak'>-----Current Win Streak: <span id="streakNum"></span>----- </div>
+                        <span id="easterEgg"></span>
+                    </div>
+                </div>
+                <!--End Row-->
+            </div>
+            <!--Bird container-->
+        </div>
+        <!--main container-->
+        <script>
+        var pandaHolder = document.querySelector('#pandaHolder');
+        pandaHolder.addEventListener('click', function() { document.getElementById('easterEgg').style.visibility = "visible"; });
+        </script>
 </body>
 </html>

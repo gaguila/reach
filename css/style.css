@@ -1,189 +1,196 @@
 @font-face {
     font-family: 'chocolate_bar_demoregular';
     src: url('chocolate_bar_demo-webfont.woff2') format('woff2'),
-         url('chocolate_bar_demo-webfont.woff') format('woff');
+        url('chocolate_bar_demo-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-.choco-font{
-	font-family: 'chocolate_bar_demoregular';
+.choco-font {
+    font-family: 'chocolate_bar_demoregular';
 }
 
-body{
-	background: url("../imgs/jungle-bg.jpg");
-	background-attachment: fixed;
-	background-size: cover;
+body {
+    background: url("../imgs/jungle-bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-#mainContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  min-height: 500px;
+#mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
 }
 
-#game-container{
-  width: 100%;
-  height: 500px;
-	background: white;
-	text-align: center;
+#game-container {
+    width: 100%;
+    height: 500px;
+    background: white;
+    text-align: center;
 }
 
-#letters-guessed-box{
-	margin-top: 25px;
-	width: 100%;
-	min-width: 600px;
-  max-width: 600px;
-	height: auto;
-	min-height: 100px;
-	background: white;
+#letters-guessed-box {
+    margin-top: 25px;
+    width: 100%;
+    min-width: 600px;
+    max-width: 600px;
+    height: auto;
+    min-height: 100px;
+    background: white;
 }
 
 
-#stats-box{
-	background: white;
-	width: 100%;
-	height: auto;
+#stats-box {
+    background: white;
+    width: 100%;
+    height: auto;
 }
 
-.orange-rounded{
-  border-radius: 25px;
-  border: 5px solid #fdb330;
-  padding: 20px; 
+.orange-rounded {
+    border-radius: 25px;
+    border: 5px solid #fdb330;
+    padding: 20px;
 }
 
-.finalWord{
-	font-weight: bold;
-	font-size: 3em;
-	color:red;
+.finalWord {
+    font-weight: bold;
+    font-size: 3em;
+    color: red;
 }
 
-.red{
-	color: red;
-	font-size: 1.5em;
-	font-weight: bold;
+.red {
+    color: red;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-.grey{
-	color: #7d7d7d;
+.grey {
+    color: #7d7d7d;
 }
 
-.sizeMed{ font-size: 1.5em}
-.sizeLrg{ font-size: 2.5em}
-
-.center-item{
-  text-align: center;
+.sizeMed {
+    font-size: 1.5em
 }
 
-.top15{
-	margin-top: 15px;
+.sizeLrg {
+    font-size: 2.5em
 }
 
-.box{
-	border-style: solid;
-	border-width: 1px;
-	padding: 5px;
+.center-item {
+    text-align: center;
 }
 
-.green{
-	padding-left: 10px;
-	font-size: 2em;
-	color: green;
+.top15 {
+    margin-top: 15px;
 }
 
-.green-inverted{
-	color: white;
-	background: green;
-	font-size: 2em;
-	padding: 5px;
+.box {
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
 }
 
-.green-success{
-	font-size: 1.5em;
-	color: green;
+.green {
+    padding-left: 10px;
+    font-size: 2em;
+    color: green;
 }
 
-.error{
-	color: red;
+.green-inverted {
+    color: white;
+    background: green;
+    font-size: 2em;
+    padding: 5px;
 }
 
-input[type="text"]{
+.green-success {
+    font-size: 1.5em;
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+input[type="text"] {
     font-size: 8em;
     font-family: monospace;
     text-align: center;
 }
 
-#main{
-	visibility: hidden;
+#main {
+    visibility: hidden;
 }
 
-#win-streak{
-	font-size: 1.25em;
-	font-weight: bold;
-	text-shadow: 1px 1px #acd038;
+#win-streak {
+    font-size: 1.25em;
+    font-weight: bold;
+    text-shadow: 1px 1px #acd038;
 }
 
-#pandaHolder{
-	position: relative;
-	top: 2px;
+#pandaHolder {
+    position: relative;
+    top: 2px;
 }
 
 
-#easterEgg{
-	visibility: hidden;
-	color: white;
-	background: teal;
-	font-size: 1.5em;
+#easterEgg {
+    visibility: hidden;
+    color: white;
+    background: teal;
+    font-size: 1.5em;
 }
 
 
 /* ----------- Non-Retina Screens ----------- */
-@media only screen 
-   and (max-width : 1400px) 
-   and (max-height : 768px) {
+@media only screen and (max-width : 1400px) and (max-height : 768px) {
 
 
-	#mainContainer{
-  		align-items: flex-start;
-  		padding-top: 0px;
-	}
+    #mainContainer {
+        align-items: flex-start;
+        padding-top: 0px;
+    }
 
-	#pandaHolder{
-		width: 50%;
-		height: auto;
-	}
+    #pandaHolder {
+        width: 50%;
+        height: auto;
+    }
 
-	input[type="text"]{
-    font-size: 6em;
-	}
+    input[type="text"] {
+        font-size: 6em;
+    }
 
-	#letters-guessed-box{
-  		height: auto;
-  		min-width: 550px;
-	}
+    #letters-guessed-box {
+        height: auto;
+        min-width: 550px;
+    }
 
-	#game-container {
-  		height: 425px;
-  		padding: 0;
-	}
-	#main{
-		min-width: 400px;
-	}
-	.sizeLrg { font-size: 2.5em; }
+    #game-container {
+        height: 425px;
+        padding: 0;
+    }
 
-	#reset{
-		font-size: 1em !important;
-	}
+    #main {
+        min-width: 400px;
+    }
 
-	.form-group{
-		margin-bottom: -1em;
-	}
-	#stats-box{
-		min-width: 500px;
-	}
+    .sizeLrg {
+        font-size: 2.5em;
+    }
+
+    #reset {
+        font-size: 1em !important;
+    }
+
+    .form-group {
+        margin-bottom: -1em;
+    }
+
+    #stats-box {
+        min-width: 500px;
+    }
 
 }
-
