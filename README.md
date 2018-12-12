@@ -1,7 +1,5 @@
 # Panda's Guessing Game
 
-This is a Javascript based word guessing game.  
-
 Game rules
 -	At the start of the game the computer/secret-keeper will choose a dictionary word
 -	The guesser loses the game if they guess 6 letters that are not in the secret word
